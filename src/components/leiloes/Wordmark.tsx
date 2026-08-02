@@ -33,7 +33,6 @@ export function Wordmark({
         <span className="block">na Mira</span>
       </span>
       <Reticle className={mark} />
-      <span className="sr-only">Leilões na Mira</span>
     </span>
   );
 }
