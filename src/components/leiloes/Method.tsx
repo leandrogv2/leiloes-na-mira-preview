@@ -53,6 +53,16 @@ export function Method() {
 
         {/* ——— Desktop: trajetória horizontal ——— */}
         <div ref={ref} className="relative mt-16 hidden lg:block">
+          {/* Faixa de papel: a partir do passo 04 a operação passa de observação a registro */}
+          <div
+            aria-hidden="true"
+            className="texture-fiber pointer-events-none absolute -top-10 bottom-[-2.5rem] left-[42.857%] w-screen bg-paper"
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-10 bottom-[-2.5rem] left-[42.857%] w-px bg-focus/50"
+          />
+
           <svg
             viewBox="0 0 1400 120"
             preserveAspectRatio="none"
@@ -152,10 +162,11 @@ export function Method() {
         {/* ——— Mobile: sequência vertical dedicada ——— */}
         <MethodVertical />
 
-        <div className="relative mt-14 grid gap-8 lg:mt-20 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
-          <p className="max-w-[64ch] text-sm leading-[1.7] text-paper/70 lg:text-ink/75 sm:text-base">
+        <div className="relative mt-24 grid gap-8 lg:mt-28 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
+          <p className="max-w-[64ch] text-sm leading-[1.7] text-paper/70 sm:text-base">
             {method.closing}
           </p>
+
           <div className="lg:justify-self-end lg:self-end">
             <a
               href="#inscricao"
