@@ -156,7 +156,7 @@ export function Method() {
 
           <div className="relative z-10 mt-10 flex items-center justify-between">
             <Coords items={["Monitor · busca e observação"]} className="!text-paper/40" />
-            <Coords items={["Papel · cálculo, decisão e registro"]} className="!text-ink/45" />
+            <Coords items={["Papel · cálculo, decisão e registro"]} className="!text-ink/60" />
           </div>
         </div>
 
