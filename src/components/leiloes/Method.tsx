@@ -125,7 +125,7 @@ export function Method() {
                     <p
                       className={`label-mono mt-4 ${onPaper ? "text-ink/50" : "text-paper/50"}`}
                     >
-                      {step.index ?? String(i + 1).padStart(2, "0")}
+                      {String(i + 1).padStart(2, "0")}
                     </p>
                     <p
                       className={`mt-2 font-sans text-[1.05rem] font-extrabold uppercase tracking-[-0.03em] ${
