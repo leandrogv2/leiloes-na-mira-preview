@@ -100,7 +100,7 @@ export function SignupForm({
             name="name"
             type="text"
             autoComplete="name"
-            className="field-line label-none mt-1 w-full text-base text-foreground sm:text-[1.05rem]"
+            className="field-line mt-1 w-full text-base text-foreground sm:text-[1.05rem]"
             aria-invalid={errors.name ? true : undefined}
             aria-describedby={errors.name ? `${nameId}-error` : undefined}
           />
