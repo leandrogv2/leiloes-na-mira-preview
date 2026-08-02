@@ -191,15 +191,11 @@ export function Closing() {
           </div>
 
           <div className="relative">
-            {/* Camada de papel alinhada à malha do monitor */}
-            <span
-              aria-hidden="true"
-              className="texture-fiber absolute -right-4 -top-4 hidden h-24 w-40 bg-paper/90 lg:block"
-            />
             <Reveal variant="frame" className="relative">
               <SignupForm id="inscricao-final" ctaLabel={closing.cta} />
             </Reveal>
           </div>
+
         </div>
       </div>
     </section>

@@ -30,12 +30,8 @@ export function Method() {
         className="texture-microgrid-wide pointer-events-none absolute inset-0 opacity-50"
       />
 
-      {/* Faixa de papel: a operação passa de observação a registro */}
-      <div
-        aria-hidden="true"
-        className="texture-fiber pointer-events-none absolute inset-y-0 right-0 hidden w-[54%] bg-paper lg:block"
-        style={{ clipPath: "polygon(9% 0, 100% 0, 100% 100%, 0 100%)" }}
-      />
+
+
 
       <div className="relative mx-auto w-full max-w-[1400px] px-5 py-20 sm:px-8 lg:py-32">
         <div className="lg:max-w-[46%]">
