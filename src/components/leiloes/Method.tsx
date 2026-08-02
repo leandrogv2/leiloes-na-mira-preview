@@ -39,7 +39,7 @@ export function Method() {
                 aria-hidden="true"
                 className="absolute -top-[3px] left-0 hidden size-[6px] bg-focus lg:block"
               />
-              <p className="label-mono text-focus-strong text-foreground/60">
+              <p className="label-mono text-foreground/60">
                 Passo {String(i + 1).padStart(2, "0")}
               </p>
               <p className="mt-3 font-sans text-lg font-bold uppercase tracking-[-0.01em] sm:text-xl">
