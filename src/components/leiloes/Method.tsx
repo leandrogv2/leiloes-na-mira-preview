@@ -67,7 +67,8 @@ export function Method() {
             viewBox="0 0 1400 120"
             preserveAspectRatio="none"
             aria-hidden="true"
-            className="h-24 w-full"
+            className="relative z-10 h-24 w-full"
+
           >
             <polyline
               points={points}
@@ -107,7 +108,7 @@ export function Method() {
             ))}
           </svg>
 
-          <ol className="grid grid-cols-7 gap-x-5">
+          <ol className="relative z-10 grid grid-cols-7 gap-x-5">
             {method.steps.map((step, i) => {
               const onPaper = i >= PAPER_FROM;
               return (
@@ -153,7 +154,7 @@ export function Method() {
             })}
           </ol>
 
-          <div className="mt-10 flex items-center justify-between">
+          <div className="relative z-10 mt-10 flex items-center justify-between">
             <Coords items={["Monitor · busca e observação"]} className="!text-paper/40" />
             <Coords items={["Papel · cálculo, decisão e registro"]} className="!text-ink/45" />
           </div>
