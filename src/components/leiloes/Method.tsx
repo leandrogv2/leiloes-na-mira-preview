@@ -42,7 +42,7 @@ export function Method() {
               <p className="label-mono text-foreground/60">
                 Passo {String(i + 1).padStart(2, "0")}
               </p>
-              <p className="mt-3 font-sans text-lg font-bold uppercase tracking-[-0.01em] sm:text-xl">
+              <p className="mt-3 font-sans text-lg font-bold uppercase tracking-[-0.02em] lg:text-[0.95rem]">
                 {step.name}
               </p>
               <p className="mt-2 max-w-[34ch] text-sm leading-relaxed text-muted-foreground">

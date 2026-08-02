@@ -55,6 +55,26 @@ export function Hero() {
                 {hero.subheadline}
               </p>
             </Reveal>
+
+            <dl
+              className="mt-12 hidden max-w-xl grid-cols-3 border-t border-border pt-6 lg:grid"
+              aria-label="Formato do evento"
+            >
+              {[
+                ["Formato", "Online e ao vivo"],
+                ["Aulas", "Três encontros"],
+                ["Investimento", "Gratuito"],
+              ].map(([term, value]) => (
+                <div key={term} className="pr-6">
+                  <dt className="label-mono text-muted-foreground">{term}</dt>
+                  <dd className="mt-2 text-sm text-paper">{value}</dd>
+                </div>
+              ))}
+            </dl>
+
+            <p className="label-mono mt-8 hidden text-muted-foreground/70 lg:block">
+              Coord_01 −23.5505 · Coord_02 −46.6333 · Res 1920×1080
+            </p>
           </div>
 
           <div className="lg:pt-4">
