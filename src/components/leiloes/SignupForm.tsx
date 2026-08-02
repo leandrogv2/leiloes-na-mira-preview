@@ -59,7 +59,7 @@ export function SignupForm({
     tone === "panel" &&
       (isPaper
         ? "border-l-2 border-focus bg-paper-2/70 px-5 py-6 sm:px-7 sm:py-8"
-        : "border-l-2 border-focus bg-graphite/70 px-5 py-6 backdrop-blur-[3px] sm:px-7 sm:py-8"),
+        : "border-l-2 border-focus bg-graphite/90 px-5 py-6 backdrop-blur-[3px] sm:px-7 sm:py-8"),
   );
 
   if (status === "success") {
