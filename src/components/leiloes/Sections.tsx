@@ -1,57 +1,74 @@
 import { useId, useState } from "react";
-import authorityImage from "@/assets/authority-slot.jpg";
+import desk from "@/assets/ad-desk.jpg";
 import { professor, faq, closing, footer } from "@/content/leiloes";
-import { Reveal, AnalysisLine } from "./Reveal";
+import { Reveal, AnalysisLine, Coords } from "./Reveal";
 import { Reticle, FrameCorners } from "./Reticle";
 import { SignupForm } from "./SignupForm";
 import { Wordmark } from "./Wordmark";
 
+/**
+ * Professor Mira — autoridade construída por composição, escala e hierarquia.
+ * A mídia é uma cena de análise (mesa, planta, monitor), intencional e completa.
+ * Slot tecnicamente substituível pela fotografia autorizada: trocar apenas o
+ * import `desk` e o texto alternativo. Nenhum rótulo de placeholder é exibido.
+ */
 export function Professor() {
   return (
     <section aria-labelledby="professor" className="relative overflow-hidden bg-background">
-      <div className="relative mx-auto w-full max-w-[1400px] px-5 py-20 sm:px-8 lg:py-28">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
-          {/* Slot de mídia substituível: nenhuma imagem sintética de pessoa. */}
-          <Reveal as="figure" className="relative m-0 order-2 lg:order-1">
-            <div className="relative overflow-hidden border border-white/10">
-              <img
-                src={authorityImage}
-                alt="Documentos de imóvel e desenho arquitetônico sobre mesa iluminada por um monitor"
-                width={1200}
-                height={1200}
-                loading="lazy"
-                className="aspect-square w-full object-cover"
-              />
-              <div
-                aria-hidden="true"
-                className="texture-microgrid pointer-events-none absolute inset-0 opacity-30"
-              />
-              <div className="pointer-events-none absolute inset-4 text-focus/60">
-                <FrameCorners />
-              </div>
-            </div>
-            <figcaption className="label-mono mt-3 text-muted-foreground">
-              Mídia provisória · slot reservado para imagem autorizada
-            </figcaption>
-          </Reveal>
+      <div className="relative grid lg:grid-cols-[1.05fr_0.95fr]">
+        <Reveal as="figure" variant="rack" className="relative m-0 min-h-[19rem] lg:min-h-[38rem]">
+          <img
+            src={desk}
+            alt="Mesa de análise com planta impressa sob luz dirigida, documentos dobrados e um monitor desfocado ao fundo"
+            width={1280}
+            height={1024}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div aria-hidden="true" className="frame-vignette absolute inset-0 opacity-60" />
+          <div
+            aria-hidden="true"
+            className="texture-microgrid-fine absolute inset-0 opacity-30"
+          />
+          <span aria-hidden="true" className="absolute inset-6 text-focus/45">
+            <FrameCorners size="md" />
+          </span>
+          <Reticle mode="axes" className="absolute bottom-6 left-6 size-10" />
+          <div
+            aria-hidden="true"
+            className="absolute inset-y-0 right-0 hidden w-24 lg:block"
+            style={{
+              background:
+                "linear-gradient(to right, transparent, color-mix(in oklab, var(--background) 92%, transparent))",
+            }}
+          />
+        </Reveal>
 
-          <div className="order-1 lg:order-2">
-            <p className="label-mono text-focus">06 · Apresentação</p>
-            <Reveal>
-              <h2
-                id="professor"
-                className="mt-6 font-sans text-3xl font-extrabold uppercase leading-[1.02] tracking-[-0.02em] sm:text-5xl"
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-16 sm:px-8 lg:py-28 lg:pl-14 lg:pr-8">
+          <p className="label-mono text-focus">06 · Apresentação</p>
+          <Reveal>
+            <h2
+              id="professor"
+              className="mt-7 max-w-[14ch] font-sans text-[2rem] font-extrabold uppercase leading-[0.92] tracking-[-0.04em] sm:text-[3.2rem]"
+            >
+              {professor.title}
+            </h2>
+          </Reveal>
+          <AnalysisLine className="mt-8 w-32 text-focus opacity-60" />
+          {professor.paragraphs.map((p, i) => (
+            <Reveal key={i} delay={i * 80} variant="rise">
+              <p
+                className={
+                  i === 0
+                    ? "mt-8 max-w-[52ch] text-[1.08rem] leading-[1.65]"
+                    : "mt-6 max-w-[52ch] text-base leading-[1.7] text-muted-foreground"
+                }
               >
-                {professor.title}
-              </h2>
+                {p}
+              </p>
             </Reveal>
-            <AnalysisLine className="mt-8 w-32" />
-            {professor.paragraphs.map((p, i) => (
-              <Reveal key={i} delay={i * 90}>
-                <p className="mt-6 max-w-[58ch] text-base leading-relaxed sm:text-lg">{p}</p>
-              </Reveal>
-            ))}
-          </div>
+          ))}
+          <Coords className="mt-10" items={["Apresentador único", "Três aulas ao vivo"]} />
         </div>
       </div>
     </section>
@@ -64,7 +81,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
   const buttonId = useId();
 
   return (
-    <li className="border-b border-foreground/15">
+    <li className="border-b border-foreground/12">
       <h3>
         <button
           type="button"
@@ -72,51 +89,48 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((v) => !v)}
-          className="flex min-h-14 w-full items-start justify-between gap-6 py-5 text-left"
+          className="group flex min-h-14 w-full items-start justify-between gap-6 py-5 text-left transition-colors hover:text-foreground"
         >
-          <span className="text-base font-medium sm:text-lg">{q}</span>
+          <span className="max-w-[46ch] text-[1.02rem] leading-[1.45] sm:text-[1.1rem]">{q}</span>
           <span
             aria-hidden="true"
-            className="relative mt-2 block size-4 shrink-0 text-focus"
+            className="relative mt-2 block size-3.5 shrink-0 text-focus transition-transform duration-300 group-hover:scale-110"
           >
-            <span className="absolute left-0 top-1/2 h-px w-full bg-current" />
+            <span className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current" />
             <span
-              className="absolute left-1/2 top-0 h-full w-px bg-current transition-transform duration-300"
-              style={{ transform: open ? "scaleY(0)" : "scaleY(1)" }}
+              className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-current transition-transform duration-300"
+              style={{ transform: open ? "translateX(-50%) scaleY(0)" : "translateX(-50%) scaleY(1)" }}
             />
           </span>
         </button>
       </h3>
       <div
-        id={panelId}
-        role="region"
-        aria-labelledby={buttonId}
-        hidden={!open}
-        className="pb-6 pr-10"
+        className="grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
       >
-        <p className="max-w-[64ch] text-sm leading-relaxed text-muted-foreground sm:text-base">
-          {a}
-        </p>
+        <div id={panelId} role="region" aria-labelledby={buttonId} className="overflow-hidden">
+          <p className="max-w-[62ch] pb-7 pr-8 text-[0.95rem] leading-[1.75] text-muted-foreground">
+            {a}
+          </p>
+        </div>
       </div>
     </li>
   );
 }
 
+/** FAQ — momento de calma: refinamento apenas em espaço, ritmo e resposta. */
 export function Faq() {
   return (
-    <section
-      aria-labelledby="faq"
-      className="chapter-paper texture-paper relative overflow-hidden"
-    >
+    <section aria-labelledby="faq" className="chapter-paper relative bg-paper-2">
       <div className="mx-auto w-full max-w-[1400px] px-5 py-20 sm:px-8 lg:py-28">
-        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
-          <div>
+        <div className="grid gap-10 lg:grid-cols-[0.62fr_1.38fr] lg:gap-20">
+          <div className="lg:sticky lg:top-20 lg:self-start">
             <p className="label-mono text-muted-foreground">07 · Dúvidas</p>
-            <h2 id="faq" className="editorial mt-6 text-[2rem] sm:text-5xl">
+            <h2 id="faq" className="editorial mt-6 max-w-[12ch] text-[2rem] sm:text-[2.6rem]">
               {faq.title}
             </h2>
           </div>
-          <ul className="border-t border-foreground/15">
+          <ul className="border-t border-foreground/12">
             {faq.items.map((item, i) => (
               <FaqItem key={item.q} q={item.q} a={item.a} index={i} />
             ))}
@@ -127,41 +141,61 @@ export function Faq() {
   );
 }
 
+/** Fechamento — convergência: todas as linhas chegam a uma decisão. */
 export function Closing() {
   return (
     <section aria-labelledby="fechamento" className="relative overflow-hidden bg-background">
       <div
         aria-hidden="true"
-        className="texture-microgrid pointer-events-none absolute inset-0 opacity-35"
+        className="texture-microgrid-fine pointer-events-none absolute inset-0 opacity-40"
       />
-      <div
+      {/* Linhas convergindo para o ponto de decisão */}
+      <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -left-32 bottom-0 size-[24rem] rounded-full opacity-[0.14] blur-3xl"
-        style={{ background: "var(--focus)" }}
-      />
-      <div className="relative mx-auto w-full max-w-[1400px] px-5 py-20 sm:px-8 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        viewBox="0 0 1200 600"
+        preserveAspectRatio="none"
+        className="pointer-events-none absolute inset-0 h-full w-full text-focus"
+      >
+        <g stroke="currentColor" fill="none" strokeWidth="1" opacity="0.22">
+          <path d="M0 40 L760 300" />
+          <path d="M0 220 L760 300" />
+          <path d="M0 420 L760 300" />
+          <path d="M0 590 L760 300" />
+          <path d="M1200 90 L760 300" />
+          <path d="M1200 520 L760 300" />
+        </g>
+        <circle cx="760" cy="300" r="3" fill="currentColor" opacity="0.8" />
+      </svg>
+
+      <div className="relative mx-auto w-full max-w-[1400px] px-5 py-20 sm:px-8 lg:py-32">
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <Reticle className="size-16" />
-            <Reveal>
+            <Reveal variant="settle">
+              <Reticle mode="lock" className="size-14" strokeWidth={3} />
+            </Reveal>
+            <Reveal delay={60}>
               <h2
                 id="fechamento"
-                className="mt-8 max-w-[24ch] font-sans text-3xl font-extrabold uppercase leading-[1.02] tracking-[-0.02em] sm:text-5xl lg:text-6xl"
+                className="mt-9 max-w-[20ch] font-sans text-[2.1rem] font-extrabold uppercase leading-[0.9] tracking-[-0.045em] sm:text-[3.4rem] lg:text-[4rem]"
               >
                 {closing.title}
               </h2>
             </Reveal>
-            <Reveal delay={80}>
-              <p className="mt-6 max-w-[54ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <AnalysisLine className="my-8 w-full max-w-md text-focus opacity-60" />
+            <Reveal delay={110} variant="rise">
+              <p className="max-w-[50ch] text-base leading-[1.7] text-muted-foreground sm:text-[1.05rem]">
                 {closing.text}
               </p>
             </Reveal>
-            <p className="label-mono mt-8 text-focus">{closing.microcopy}</p>
+            <p className="label-mono mt-8 max-w-[46ch] text-focus">{closing.microcopy}</p>
           </div>
 
-          <div>
-            <SignupForm id="inscricao-final" ctaLabel={closing.cta} />
+          <div className="relative">
+            <Reveal variant="frame" className="relative">
+              <SignupForm id="inscricao-final" ctaLabel={closing.cta} />
+            </Reveal>
           </div>
+
         </div>
       </div>
     </section>
@@ -170,28 +204,28 @@ export function Closing() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="relative border-t border-border bg-background">
       <div className="mx-auto w-full max-w-[1400px] px-5 py-14 sm:px-8">
-        <div className="flex flex-wrap items-start justify-between gap-8">
+        <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-16">
           <Wordmark size="sm" />
-          <nav aria-label="Links legais" className="flex flex-wrap gap-x-8 gap-y-3">
-            {footer.links.map((label) => (
-              <span
-                key={label}
-                aria-disabled="true"
-                className="label-mono inline-flex min-h-11 items-center text-muted-foreground"
-              >
-                {label}
-              </span>
-            ))}
-          </nav>
+          <div>
+            <nav aria-label="Links legais" className="flex flex-wrap gap-x-8 gap-y-2">
+              {footer.links.map((label) => (
+                <span
+                  key={label}
+                  aria-disabled="true"
+                  className="label-mono inline-flex min-h-11 items-center text-muted-foreground"
+                >
+                  {label}
+                </span>
+              ))}
+            </nav>
+            <p className="mt-8 max-w-[78ch] text-xs leading-[1.8] text-muted-foreground">
+              {footer.disclaimer}
+            </p>
+            <Coords className="mt-6" items={["Protótipo não publicado", "Marca provisória"]} />
+          </div>
         </div>
-        <p className="mt-10 max-w-[80ch] text-xs leading-relaxed text-muted-foreground">
-          {footer.disclaimer}
-        </p>
-        <p className="label-mono mt-6 text-muted-foreground/70">
-          Protótipo de portfólio · evento fictício · tipografia e marca provisórias
-        </p>
       </div>
     </footer>
   );
