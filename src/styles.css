@@ -174,8 +174,9 @@
 @utility texture-dark-paper {
   background-color: var(--background);
   background-image: url("/assets/textures/dark-paper-grain.webp");
-  background-repeat: repeat;
-  background-size: 768px 768px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @utility glow-focus {
