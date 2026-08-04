@@ -3,7 +3,10 @@ import { Reveal } from "./Reveal";
 
 export function Outcomes() {
   return (
-    <section aria-labelledby="resultados" className="relative overflow-hidden bg-background">
+    <section
+      aria-labelledby="resultados"
+      className="texture-dark-paper relative overflow-hidden bg-background"
+    >
       <div
         aria-hidden="true"
         className="texture-scanlines pointer-events-none absolute inset-0 opacity-30"

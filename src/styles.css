@@ -170,6 +170,15 @@
   background-position: 0 0, 2px 3px;
 }
 
+/* Textura editorial escura: asset leve, repetível e sem impacto no layout */
+@utility texture-dark-paper {
+  background-color: var(--background);
+  background-image: url("/assets/textures/dark-paper-grain.webp");
+  background-repeat: repeat;
+  background-size: 512px 512px;
+  background-blend-mode: soft-light;
+}
+
 @utility glow-focus {
   box-shadow: 0 0 0 1px color-mix(in oklab, var(--focus) 45%, transparent),
     0 0 28px -6px color-mix(in oklab, var(--focus) 40%, transparent);

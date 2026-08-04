@@ -8,7 +8,10 @@ import { Wordmark } from "./Wordmark";
 
 export function Professor() {
   return (
-    <section aria-labelledby="professor" className="relative overflow-hidden bg-background">
+    <section
+      aria-labelledby="professor"
+      className="texture-dark-paper relative overflow-hidden bg-background"
+    >
       <div className="relative mx-auto w-full max-w-[1400px] px-5 py-20 sm:px-8 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
           {/* Slot de mídia substituível: nenhuma imagem sintética de pessoa. */}
@@ -132,7 +135,10 @@ export function Faq() {
 
 export function Closing() {
   return (
-    <section aria-labelledby="fechamento" className="relative overflow-hidden bg-background">
+    <section
+      aria-labelledby="fechamento"
+      className="texture-dark-paper relative overflow-hidden bg-background"
+    >
       <div
         aria-hidden="true"
         className="texture-microgrid pointer-events-none absolute inset-0 opacity-35"
@@ -173,7 +179,7 @@ export function Closing() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="texture-dark-paper border-t border-border bg-background">
       <div className="mx-auto w-full max-w-[1400px] px-5 py-14 sm:px-8">
         <div className="flex flex-wrap items-start justify-between gap-8">
           <Wordmark size="sm" />

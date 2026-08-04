@@ -45,7 +45,10 @@ export function Reframe() {
 
 export function Lessons() {
   return (
-    <section aria-labelledby="aulas" className="relative overflow-hidden bg-background">
+    <section
+      aria-labelledby="aulas"
+      className="texture-dark-paper relative overflow-hidden bg-background"
+    >
       <div
         aria-hidden="true"
         className="texture-microgrid pointer-events-none absolute inset-0 opacity-25"

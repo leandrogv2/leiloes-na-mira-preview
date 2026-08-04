@@ -7,7 +7,7 @@ import { Reveal, AnalysisLine } from "./Reveal";
 
 export function Hero() {
   return (
-    <header className="relative overflow-hidden bg-background">
+    <header className="texture-dark-paper relative overflow-hidden bg-background">
       <div
         aria-hidden="true"
         className="texture-microgrid pointer-events-none absolute inset-0 opacity-40"
