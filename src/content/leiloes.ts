@@ -20,7 +20,6 @@ export const reframe = {
     "Encontrar um imóvel é o começo. Enxergar a oportunidade é o que muda a decisão.",
   paragraphs: [
     "Em um leilão, o desconto é a parte que chama atenção. Mas uma boa análise também considera os documentos, os custos, a ocupação, o tempo e o que você pretende fazer com o imóvel depois.",
-    "Quando essas peças entram na mesma conta, fica mais fácil reconhecer o que merece ser investigado, definir limites e escolher o próximo passo com critério.",
     "No Leilões na Mira, o Professor Mira vai organizar essa jornada para quem deseja entender os leilões como uma possibilidade de investimento imobiliário — com método e sem cair em armadilhas.",
   ],
   cta: "Quero aprender a analisar oportunidades",
