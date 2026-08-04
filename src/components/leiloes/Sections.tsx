@@ -192,9 +192,6 @@ export function SiteFooter() {
         <p className="mt-10 max-w-[80ch] text-xs leading-relaxed text-muted-foreground">
           {footer.disclaimer}
         </p>
-        <p className="label-mono mt-6 text-muted-foreground/70">
-          Protótipo de portfólio · evento fictício · tipografia e marca provisórias
-        </p>
       </div>
     </footer>
   );
