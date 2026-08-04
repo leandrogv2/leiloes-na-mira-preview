@@ -30,10 +30,8 @@ export function Professor() {
                 <FrameCorners />
               </div>
             </div>
-            <figcaption className="label-mono mt-3 text-muted-foreground">
-              Mídia provisória · slot reservado para imagem autorizada
-            </figcaption>
           </Reveal>
+
 
           <div className="order-1 lg:order-2">
             <p className="label-mono text-focus">06 · Apresentação</p>
@@ -77,11 +75,11 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
           <span className="text-base font-medium sm:text-lg">{q}</span>
           <span
             aria-hidden="true"
-            className="relative mt-2 block size-4 shrink-0 text-focus"
+            className="relative mt-2 block size-4 shrink-0 text-foreground"
           >
             <span className="absolute left-0 top-1/2 h-px w-full bg-current" />
             <span
-              className="absolute left-1/2 top-0 h-full w-px bg-current transition-transform duration-300"
+              className="absolute left-1/2 top-0 h-full w-px bg-current transition-transform duration-300 ease-out"
               style={{ transform: open ? "scaleY(0)" : "scaleY(1)" }}
             />
           </span>
@@ -91,13 +89,18 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
         id={panelId}
         role="region"
         aria-labelledby={buttonId}
-        hidden={!open}
-        className="pb-6 pr-10"
+        aria-hidden={!open}
+        className={`grid transition-all duration-500 ease-out ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
       >
-        <p className="max-w-[64ch] text-sm leading-relaxed text-muted-foreground sm:text-base">
-          {a}
-        </p>
+        <div className="overflow-hidden">
+          <p className="max-w-[64ch] pb-6 pr-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {a}
+          </p>
+        </div>
       </div>
+
     </li>
   );
 }
@@ -156,7 +159,7 @@ export function Closing() {
                 {closing.text}
               </p>
             </Reveal>
-            <p className="label-mono mt-8 text-focus">{closing.microcopy}</p>
+            
           </div>
 
           <div>
@@ -188,9 +191,6 @@ export function SiteFooter() {
         </div>
         <p className="mt-10 max-w-[80ch] text-xs leading-relaxed text-muted-foreground">
           {footer.disclaimer}
-        </p>
-        <p className="label-mono mt-6 text-muted-foreground/70">
-          Protótipo de portfólio · evento fictício · tipografia e marca provisórias
         </p>
       </div>
     </footer>

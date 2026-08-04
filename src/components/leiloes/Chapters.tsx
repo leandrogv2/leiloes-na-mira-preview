@@ -32,7 +32,7 @@ export function Reframe() {
 
             <a
               href="#inscricao"
-              className="label-mono mt-10 inline-flex min-h-12 items-center border-b-2 border-focus px-1 py-3 text-foreground transition-colors hover:bg-focus/25"
+              className="label-mono mt-10 inline-flex min-h-12 items-center border-b-2 border-foreground px-1 py-3 text-foreground transition-colors hover:bg-foreground/10"
             >
               {reframe.cta}
             </a>

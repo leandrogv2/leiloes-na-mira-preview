@@ -37,7 +37,7 @@ export function Method() {
               />
               <span
                 aria-hidden="true"
-                className="absolute -top-[3px] left-0 hidden size-[6px] bg-focus lg:block"
+                className="absolute -top-[3px] left-0 hidden size-[6px] bg-foreground lg:block"
               />
               <p className="label-mono text-foreground/60">
                 Passo {String(i + 1).padStart(2, "0")}

@@ -20,7 +20,6 @@ export const reframe = {
     "Encontrar um imóvel é o começo. Enxergar a oportunidade é o que muda a decisão.",
   paragraphs: [
     "Em um leilão, o desconto é a parte que chama atenção. Mas uma boa análise também considera os documentos, os custos, a ocupação, o tempo e o que você pretende fazer com o imóvel depois.",
-    "Quando essas peças entram na mesma conta, fica mais fácil reconhecer o que merece ser investigado, definir limites e escolher o próximo passo com critério.",
     "No Leilões na Mira, o Professor Mira vai organizar essa jornada para quem deseja entender os leilões como uma possibilidade de investimento imobiliário — com método e sem cair em armadilhas.",
   ],
   cta: "Quero aprender a analisar oportunidades",
@@ -69,13 +68,13 @@ export const method = {
   opening:
     "Um mapa para organizar informações dispersas e acompanhar a operação em todas as etapas.",
   steps: [
-    { name: "Enxergar", text: "localizar possibilidades e reconhecer o que merece atenção." },
-    { name: "Investigar", text: "reunir documentos, condições e informações relevantes." },
-    { name: "Calcular", text: "colocar na conta aquisição, custos, prazo e cenários." },
-    { name: "Decidir", text: "estabelecer critérios e limites antes da disputa." },
-    { name: "Executar", text: "compreender o arremate e as providências que vêm depois." },
-    { name: "Transformar", text: "preparar o imóvel de acordo com o objetivo definido." },
-    { name: "Realizar", text: "escolher entre vender, alugar, usar ou manter no patrimônio." },
+    { name: "Enxergar", text: "Localizar possibilidades e reconhecer o que merece atenção." },
+    { name: "Investigar", text: "Reunir documentos, condições e informações relevantes." },
+    { name: "Calcular", text: "Colocar na conta aquisição, custos, prazo e cenários." },
+    { name: "Decidir", text: "Estabelecer critérios e limites antes da disputa." },
+    { name: "Executar", text: "Compreender o arremate e as providências que vêm depois." },
+    { name: "Transformar", text: "Preparar o imóvel de acordo com o objetivo definido." },
+    { name: "Realizar", text: "Escolher entre vender, alugar, usar ou manter no patrimônio." },
   ],
   closing:
     "O método não elimina a incerteza nem substitui especialistas. Ele ajuda o investidor a organizar a análise, fazer perguntas melhores e reconhecer quando é hora de aprofundar, desistir ou buscar apoio habilitado.",
@@ -86,12 +85,12 @@ export const outcomes = {
   title:
     "Ao final do evento, você terá um mapa mais claro para avaliar cada oportunidade",
   items: [
-    "entender onde surgem e onde buscar imóveis de leilão;",
-    "reconhecer o que precisa ser investigado além do preço anunciado;",
-    "organizar os principais custos e variáveis da operação;",
-    "compreender como o objetivo final muda a análise do imóvel;",
-    "conhecer critérios para avançar, aprofundar ou desistir;",
-    "identificar quando uma questão exige um profissional habilitado.",
+    "Entender onde surgem e onde buscar imóveis de leilão;",
+    "Reconhecer o que precisa ser investigado além do preço anunciado;",
+    "Organizar os principais custos e variáveis da operação;",
+    "Compreender como o objetivo final muda a análise do imóvel;",
+    "Conhecer critérios para avançar, aprofundar ou desistir;",
+    "Identificar quando uma questão exige um profissional habilitado.",
   ],
   limit:
     "As aulas entregam fundamentos, critérios iniciais e uma visão organizada da jornada. Não oferecem recomendação individual de compra, análise jurídica ou promessa de resultado financeiro.",
@@ -102,26 +101,25 @@ export const fit = {
   text: "O Leilões na Mira foi pensado para quem já investe ou está construindo patrimônio e deseja compreender os leilões como uma nova possibilidade dentro do mercado imobiliário.",
   forTitle: "Faz sentido para você se:",
   forItems: [
-    "quer conhecer uma forma diferente de investir em imóveis;",
-    "valoriza análise, planejamento e critérios claros;",
-    "pretende se preparar antes de participar de um leilão;",
-    "considera vender, alugar, usar ou manter um imóvel no patrimônio;",
-    "entende que algumas decisões precisam de apoio jurídico, contábil ou técnico.",
+    "Quer conhecer uma forma diferente de investir em imóveis;",
+    "Valoriza análise, planejamento e critérios claros;",
+    "Pretende se preparar antes de participar de um leilão;",
+    "Considera vender, alugar, usar ou manter um imóvel no patrimônio;",
+    "Entende que algumas decisões precisam de apoio jurídico, contábil ou técnico.",
   ],
   againstTitle: "Não é uma proposta para quem:",
   againstItems: [
-    "procura lucro rápido ou retorno garantido;",
-    "quer receber uma lista de imóveis para comprar sem análise própria;",
-    "espera substituir profissionais habilitados por uma aula;",
-    "pretende assumir uma operação sem reserva para custos e imprevistos.",
+    "Procura lucro rápido ou retorno garantido;",
+    "Quer receber uma lista de imóveis para comprar sem análise própria;",
+    "Espera substituir profissionais habilitados por uma aula;",
+    "Pretende assumir uma operação sem reserva para custos e imprevistos.",
   ],
 };
 
 export const professor = {
-  title: "Com o Professor Mira",
+  title: "Conheça o seu professor",
   paragraphs: [
     "Eduardo Mira, conhecido como Professor Mira, é educador financeiro, investidor, empresário, escritor e criador de conteúdo sobre investimentos. Sua atuação combina educação, análise e ferramentas voltadas ao investidor pessoa física.",
-    "No Leilões na Mira, ele conduz sozinho as três aulas e apresenta os fundamentos da operação em uma linguagem direta, conectando as decisões do leilão à construção e gestão do patrimônio.",
   ],
 };
 
@@ -163,8 +161,6 @@ export const closing = {
   title: "Coloque uma nova possibilidade de investimento na sua mira",
   text: "Participe de três aulas gratuitas e ao vivo para compreender o caminho entre encontrar um imóvel, analisar a operação e escolher o destino do investimento.",
   cta: "Quero participar do Leilões na Mira",
-  microcopy:
-    "Inscrição gratuita. Datas e informações de acesso enviadas aos inscritos assim que definidas.",
 };
 
 export const footer = {

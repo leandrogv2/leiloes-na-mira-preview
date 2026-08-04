@@ -131,10 +131,10 @@
 }
 
 @utility editorial {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
 }
 
 /* Textura: microgrid de monitor */
