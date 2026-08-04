@@ -64,37 +64,25 @@ export function Fit() {
         </Reveal>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <Reveal className="border-l-2 border-focus pl-6">
-            <h3 className="editorial text-2xl sm:text-3xl">{fit.forTitle}</h3>
-            <ul className="mt-6 space-y-4">
-              {fit.forItems.map((item) => (
-                <li key={item} className="flex gap-4 text-base leading-relaxed">
-                  <span aria-hidden="true" className="mt-[0.6em] h-px w-5 shrink-0 bg-focus" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-
-          <Reveal delay={90} className="border-l border-foreground/25 pl-6">
-            <h3 className="editorial text-2xl text-foreground/70 sm:text-3xl">
-              {fit.againstTitle}
-            </h3>
-            <ul className="mt-6 space-y-4">
-              {fit.againstItems.map((item) => (
-                <li
-                  key={item}
-                  className="flex gap-4 text-base leading-relaxed text-muted-foreground"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mt-[0.6em] h-px w-5 shrink-0 bg-foreground/35"
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
+          {[
+            { title: fit.forTitle, items: fit.forItems, delay: 0 },
+            { title: fit.againstTitle, items: fit.againstItems, delay: 90 },
+          ].map((block) => (
+            <Reveal key={block.title} delay={block.delay} className="border-l-2 border-foreground pl-6">
+              <h3 className="editorial text-2xl sm:text-3xl">{block.title}</h3>
+              <ul className="mt-6 space-y-4">
+                {block.items.map((item) => (
+                  <li key={item} className="flex gap-4 text-base leading-relaxed">
+                    <span
+                      aria-hidden="true"
+                      className="mt-[0.6em] h-px w-5 shrink-0 bg-foreground"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
