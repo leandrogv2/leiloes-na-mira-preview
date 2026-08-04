@@ -175,8 +175,7 @@
   background-color: var(--background);
   background-image: url("/assets/textures/dark-paper-grain.webp");
   background-repeat: repeat;
-  background-size: 512px 512px;
-  background-blend-mode: soft-light;
+  background-size: 768px 768px;
 }
 
 @utility glow-focus {
