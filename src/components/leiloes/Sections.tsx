@@ -30,10 +30,8 @@ export function Professor() {
                 <FrameCorners />
               </div>
             </div>
-            <figcaption className="label-mono mt-3 text-muted-foreground">
-              Mídia provisória · slot reservado para imagem autorizada
-            </figcaption>
           </Reveal>
+
 
           <div className="order-1 lg:order-2">
             <p className="label-mono text-focus">06 · Apresentação</p>
