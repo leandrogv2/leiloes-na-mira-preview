@@ -21,9 +21,6 @@ export function Hero() {
       <div className="relative mx-auto w-full max-w-[1400px] px-5 pb-16 pt-6 sm:px-8 lg:pb-24">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border pb-6">
           <Wordmark size="sm" />
-          <p className="label-mono text-muted-foreground">
-            Protótipo · Não publicado
-          </p>
         </div>
 
         <div className="grid gap-12 pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:pt-16">
@@ -72,9 +69,6 @@ export function Hero() {
               ))}
             </dl>
 
-            <p className="label-mono mt-8 hidden text-muted-foreground/70 lg:block">
-              Coord_01 −23.5505 · Coord_02 −46.6333 · Res 1920×1080
-            </p>
           </div>
 
           <div className="lg:pt-4">
@@ -98,10 +92,6 @@ export function Hero() {
                 </div>
                 <Reticle className="pointer-events-none absolute bottom-5 right-5 size-14" />
               </div>
-              <p className="label-mono mt-3 flex justify-between text-muted-foreground">
-                <span>Foco 00.85</span>
-                <span>Zoom 1.7x</span>
-              </p>
             </Reveal>
           </div>
         </div>

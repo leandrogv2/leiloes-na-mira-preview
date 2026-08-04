@@ -66,7 +66,7 @@ export function SignupForm({
           isPaper ? "border-foreground/25" : "border-focus/45 bg-graphite/60",
         )}
       >
-        <p className="label-mono text-focus">Inscrição simulada</p>
+        <p className="label-mono text-focus">Inscrição realizada</p>
         <div role="status" aria-live="polite" className="mt-3">
           <p className="editorial text-2xl sm:text-3xl">{formCopy.success.title}</p>
           <p className="mt-4 max-w-prose text-sm leading-relaxed text-muted-foreground">
@@ -140,7 +140,22 @@ export function SignupForm({
           "hover:translate-y-[-1px] disabled:opacity-70",
         )}
       >
-        {status === "loading" ? formCopy.loading : ctaLabel}
+        {status === "loading" ? (
+          formCopy.loading
+        ) : (
+          <span className="flex flex-col items-center leading-tight sm:block">
+            {ctaLabel.split(/\s+do\s+/i).length === 2 ? (
+              <>
+                <span>{ctaLabel.split(/\s+do\s+/i)[0]}</span>
+                <span className="sm:before:content-['\00a0']">
+                  {`do ${ctaLabel.split(/\s+do\s+/i)[1]}`}
+                </span>
+              </>
+            ) : (
+              ctaLabel
+            )}
+          </span>
+        )}
       </button>
 
       <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{hero.microcopy}</p>
