@@ -159,7 +159,7 @@ export function Closing() {
                 {closing.text}
               </p>
             </Reveal>
-            <p className="label-mono mt-8 text-focus">{closing.microcopy}</p>
+            
           </div>
 
           <div>
